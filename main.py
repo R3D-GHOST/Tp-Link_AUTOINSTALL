@@ -12,9 +12,9 @@ def tplink():
         os.system('cd rtl8188eus ; cp realtek_blacklist.conf /etc/modprobe.d ; make ; make install')
     elif kali == "2":
         os.system('sudo apt install git linux-headers-generic build-essential dkms bc')
-        os.system('git clone https://github.com/aircrack-ng/rtl8188eus.git ; cd rtl8188eus')
-        os.system("cd rtl8188eus ; echo 'blacklist r8188eu'|sudo tee -a '/etc/modprobe.d/realtek.conf' ")
-        os.system('cd rtl8188eus ; make && sudo make install')
+        os.system('git clone https://github.com/lwfinger/rtl8188eu ; cd rtl8188eu ;')
+        os.system("cd rtl8188eu ; echo 'blacklist r8188eu'|sudo tee -a '/etc/modprobe.d/realtek.conf' ")
+        os.system('cd rtl8188eu ; make all && sudo make install')
 def menu():
     print("1 --> Kali")
     print("2 --> Parrot OS")
